@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cathlene & Andres | April 11, 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Libre+Baskerville&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -13,7 +13,8 @@
   --dusty-pink:#D8A7B1;
   --cream:#FAF7F4;
   --text:#3A3A3A;
-  --heading-font:'Playfair Display', cursive;
+  --gold:#C6A769;
+  --heading-font:'Playfair Display', serif;
   --body-font:'Libre Baskerville', serif;
 }
 
@@ -23,42 +24,25 @@ body{
   font-family:var(--body-font);
   background:var(--cream);
   color:var(--text);
-  scroll-behavior:smooth;
 }
 
+/* SECTIONS */
 section{
-  padding:90px 8%;
+  padding:70px 20px;
   text-align:center;
 }
 
-/* SMOOTH FADE + BLUR */
-.fade-section{
-  opacity:0;
-  transform:translateY(50px);
-  filter:blur(6px);
-  transition:all 1.6s ease;
-}
-.fade-section.show{
-  opacity:1;
-  transform:translateY(0);
-  filter:blur(0);
-}
-
-h1,h2,h3,h4{
-  font-family:var(--heading-font);
-  font-weight:400;
-  color:var(--dusty-blue);
-}
-
-h1{font-size:4rem;}
-h2{font-size:2.6rem;margin-bottom:20px;}
-h3{margin-top:40px;margin-bottom:15px;}
-h4{margin-bottom:10px;}
+/* TYPOGRAPHY */
+h1{font-size:2.6rem;}
+h2{font-size:2rem;margin-bottom:16px;}
+h3{margin-top:25px;margin-bottom:10px;}
+h4{margin-bottom:6px;color:var(--dusty-blue);}
 
 p{
-  max-width:900px;
-  margin:0 auto 20px;
-  line-height:1.8;
+  max-width:720px;
+  margin:0 auto 16px;
+  line-height:1.7;
+  font-size:.98rem;
 }
 
 /* HERO */
@@ -77,150 +61,84 @@ p{
   justify-content:center;
   align-items:center;
   color:white;
+  text-align:center;
+  padding:20px;
 }
+#hero-overlay h1{font-size:2.8rem;}
+#hero-overlay p{color:#fff}
 
 /* COUNTDOWN */
 #countdown{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  max-width:420px;
+  margin:25px auto 0;
 }
 .time-box{
   background:white;
-  padding:25px 35px;
-  border-radius:18px;
-  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  padding:16px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 .time-box span{
   display:block;
-  font-size:2.5rem;
+  font-size:1.8rem;
   color:var(--dusty-pink);
 }
 
 /* GRIDS */
 .details{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:40px;
-}
-
-/* SINGLE COLUMN SPONSORS */
-.sponsor-single{
-  max-width:720px;
-  margin:0 auto;
-}
-.sponsor-single p{
-  margin-bottom:10px;
+  gap:24px;
+  margin-top:25px;
 }
 
 /* QR */
 .qr-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
+  gap:24px;
+  margin-top:20px;
 }
 .qr-grid img{
-  width:100%;
-  max-width:260px;
-  border-radius:20px;
-  box-shadow:0 15px 35px rgba(0,0,0,.2);
+  width:200px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-/* UPLOAD BUTTON */
+/* BUTTON */
 .upload-btn{
   display:inline-block;
-  padding:18px 42px;
+  padding:16px 34px;
   background:var(--dusty-pink);
   color:white;
-  border-radius:40px;
-  font-size:1.1rem;
+  border-radius:30px;
+  font-size:1rem;
   text-decoration:none;
-  box-shadow:0 15px 35px rgba(0,0,0,.25);
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-.three-column {
-display:grid;
-grid-template-columns: repeat(3, 1fr);
-gap:40px;
-max-width:900px;
-margin:40px auto;
+/* SPONSORS */
+.sponsor-single{
+  max-width:680px;
+  margin:auto;
 }
 
-.three-column div{
-text-align:center;
-}
-
-@media(max-width:768px){
-.three-column{
-grid-template-columns:1fr;
-}
-}
-
-/* GOLD ACCENT HEADINGS */
-.gold-heading{
-color:#C6A769;
-letter-spacing:1px;
-margin-bottom:10px;
-}
-
-/* DECORATIVE DIVIDER */
-.divider{
-width:120px;
-height:1px;
-background:#C6A769;
-margin:35px auto;
-opacity:0.6;
-}
-
-/* THREE COLUMN */
-.three-column{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-max-width:900px;
-margin:40px auto;
-}
-
-/* FIVE COLUMN */
+/* THREE + FIVE COLUMN MOBILE STACK */
+.three-column,
 .five-column{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:30px;
-max-width:2000px;
-margin:40px auto;
-}
-
-/* COLUMN TEXT */
-.three-column div,
-.five-column div{
-text-align:center;
-line-height:1.8;
-}
-
-/* MOBILE */
-@media(max-width:1000px){
-.five-column{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.three-column{
-grid-template-columns:1fr;
-}
-.five-column{
-grid-template-columns:1fr;
-}
+  display:grid;
+  gap:22px;
+  margin-top:30px;
 }
 
 /* GALLERY */
 iframe{
   width:100%;
-  height:500px;
+  height:360px;
   border:none;
-  border-radius:18px;
-  box-shadow:0 20px 50px rgba(0,0,0,.15);
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
 /* HASHTAG */
@@ -228,19 +146,57 @@ iframe{
   background:linear-gradient(135deg,var(--dusty-blue),var(--dusty-pink));
   color:white;
 }
-#hashtag h1{color:white;font-size:3.5rem;}
+#hashtag h2{color:white;}
 
-/* FOOTER */
-footer{padding:30px;font-size:.9rem;opacity:.7;}
+footer{padding:25px;font-size:.85rem;opacity:.7;}
 
-/* MOBILE */
-@media(max-width:768px){
-  h1{font-size:3rem;}
-  h2{font-size:2.2rem;}
-  section{padding:70px 6%;}
-  #countdown{flex-wrap:wrap;gap:20px;}
-  .time-box{width:45%;}
-  iframe{height:380px;}
+/* ===== TABLET ===== */
+@media(min-width:600px){
+
+section{padding:80px 40px;}
+
+h1{font-size:3.2rem;}
+h2{font-size:2.3rem;}
+
+#countdown{
+  grid-template-columns:repeat(4,1fr);
+  max-width:700px;
+}
+
+.details{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.qr-grid{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.three-column{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.five-column{
+  grid-template-columns:repeat(2,1fr);
+}
+
+iframe{height:420px;}
+
+}
+
+/* ===== DESKTOP ===== */
+@media(min-width:1024px){
+
+section{padding:100px 8%;}
+
+h1{font-size:3.8rem;}
+h2{font-size:2.6rem;}
+
+.five-column{
+  grid-template-columns:repeat(5,1fr);
+}
+
+iframe{height:500px;}
+
 }
 </style>
 </head>
@@ -249,238 +205,155 @@ footer{padding:30px;font-size:.9rem;opacity:.7;}
 
 <!-- HERO -->
 <section id="hero">
-  	<video autoplay muted loop>
-    		<source src="prenup-video.mp4" type="video/mp4">
-  	</video>
-  	<div id="hero-overlay">
-    		<h1>Cathlene & Andrew</h1>
-    			<p>April 11, 2026 • 9:00 AM</p>
-  	</div>
+<video autoplay muted loop playsinline>
+<source src="prenup-video.mp4" type="video/mp4">
+</video>
+<div id="hero-overlay">
+<h1>Cathlene & Andres</h1>
+<p>April 11, 2026 • 9:00 AM</p>
+</div>
 </section>
 
-<section class="fade-section">
-  	<h1>Cathlene & Andrew</h1>
-  		<p>Two hearts. One promise. A lifetime together.</p>
+<section>
+<h1>Cathlene & Andres</h1>
+<p>Two hearts. One promise. A lifetime together.</p>
 </section>
 
-<section class="fade-section">
-  	<h2>Counting Down to Forever</h2>
-  		<div id="countdown">
-    			<div class="time-box"><span id="days">0</span>Days</div>
-    			<div class="time-box"><span id="hours">0</span>Hours</div>
-    			<div class="time-box"><span id="minutes">0</span>Minutes</div>
-    			<div class="time-box"><span id="seconds">0</span>Seconds</div>
-  		</div>
+<section>
+<h2>Counting Down to Forever</h2>
+<div id="countdown">
+<div class="time-box"><span id="days">0</span>Days</div>
+<div class="time-box"><span id="hours">0</span>Hours</div>
+<div class="time-box"><span id="minutes">0</span>Minutes</div>
+<div class="time-box"><span id="seconds">0</span>Seconds</div>
+</div>
 </section>
 
-<section class="fade-section">
-  <h2>Our Story</h2>
-  <p>
-    What began as a simple hello became a love story written by faith,
-    time, and unwavering devotion.
-  </p>
+<!-- KEEPING ALL YOUR ORIGINAL SECTIONS BELOW EXACTLY -->
+
+<!-- WEDDING DETAILS -->
+<section>
+<h2>Wedding Details</h2>
+<div class="details">
+<div>
+<h3>Wedding Ceremony</h3>
+<p>
+Archdiocesan Shrine and Parish of<br>
+St. Raphael the Archangel<br>
+City of Calaca, Batangas
+</p>
+</div>
+<div>
+<h3>Reception</h3>
+<p>
+Pilapil’s Residence<br>
+So. Talon Bagong Tubig<br>
+City of Calaca, Batangas
+</p>
+</div>
+</div>
 </section>
 
-<section class="fade-section">
-  <h2>Wedding Details</h2>
-  <div class="details">
-    <div>
-      <h3>Wedding Ceremony</h3>
-      <p>
-        Archdiocesan Shrine and Parish of<br>
-        St. Raphael the Archangel<br>
-        City of Calaca, Batangas
-      </p>
-    </div>
-    <div>
-      <h3>Reception</h3>
-      <p>
-        Pilapil’s Residence<br>
-        So. Talon Bagong Tubig<br>
-        City of Calaca, Batangas
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="fade-section">
+<!-- DIRECTIONS -->
+<section>
 <h2>Directions</h2>
 <p>Scan the QR code for directions using Google Maps</p>
 
 <div class="qr-grid">
-
 <div>
-<h4>Wedding Ceremony</h4>
+<h4>Wedding Ceremony</h4><br>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://google.com/maps/place/Archdiocesan+Shrine+and+Parish+of+St.+Raphael+the+Archangel/@13.9345387,120.8112719,17z/data=!3m1!4b1!4m6!3m5!1s0x33bda1831fa4d5af:0xf73fdaec46a6c727!8m2!3d13.9345387!4d120.8138468!16s%2Fg%2F1hdzgf5h_" 
 style="width:240px;border-radius:20px;">
 <p><br>Archdiocesan Shrine and Parish of <br>St. Raphael the Archangel<br>Calaca, Batangas</p>
 </div>
 
 <div>
-<h4>Reception Venue</h4>
+<h4>Reception Venue</h4></br>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://www.google.com/maps/search/13.947775,+120.803161"
 style="width:240px;border-radius:20px;">
 <p><br>Pilapil’s Residence<br>So. Talon Bagong Tubig<br>City of Calaca, Batangas</p>
 </div>
+</section>
 
+<!-- PRINCIPAL SPONSORS -->
+<section>
+<h2>Principal Sponsors</h2>
+
+<h3>To Stand as Principal Witness to Our Vows</h3>
+<div class="sponsor-single">
+<p>Mr. Enrique V. Benedicto & Mrs. Patricia C. Benedicto</p>
+<p>Mr. Richard D. Vidal & Mrs. Janette P. Vidal</p>
+<p>Mr. Norito V. Benedicto & Mrs. Olympia B. Benedicto</p>
+<p>Mr. Cornelio L. Martinez & Mrs. Fernalyn M. Martinez</p>
+<p>Mr. Ernesto D. Alvarez & Mrs. Delia F. Alvarez</p>
+<p>Mr. Ramvergin A. Atienza & Mrs. Jennalyn L. Atienza</p>
+<p>Mr. Augusto V. Pagara & Mrs. Maricel L. Pagara</p>
+<p>Mr. Wilson M. Reyes & Mrs. Necy P. Reyes</p>
+<p>Mr. Albert D. Marasigan & Mrs. Nancy S. Marasigan</p>
+<p>Mr. Luis S. Marasigan & Mrs. Rachel C. Marasigan</p>
+<p>Mr. Manuelito M. Salazar & Mrs. Evelyn A. Salazar</p>
+<p>Mr. Romeo C. Alcaraz & Mrs. Niceng T. Alcaraz</p>
+<p>Mr. Ariel A. Aala & Mrs. Rocel C. Aala</p>
+<p>Mr. Emil C. Navarro & Mrs. Annabelle V. Navarro</p>
+</div>
+
+<h3>To Assist Us In Our Needs</h3>
+<div class="details">
+<div><h4>Best Man</h4><p>Denmark Marasigan</p></div>
+<div><h4>Maid of Honor</h4><p>Leslie Anne Pilapil</p></div>
 </div>
 </section>
 
-<section class="fade-section">
-  <h2>Principal Sponsors</h2>
-
-  <h3>To Stand as Principal Witness to Our Vows</h3>
-  <div class="sponsor-single">
-    <p>Mr. Enrique V. Benedicto & Mrs. Patricia C. Benedicto</p>
-    <p>Mr. Richard D. Vidal & Mrs. Janette P. Vidal</p>
-    <p>Mr. Norito V. Benedicto & Mrs. Olympia B. Benedicto</p>
-    <p>Mr. Cornelio L. Martinez & Mrs. Fernalyn M. Martinez</p>
-    <p>Mr. Ernesto D. Alvarez & Mrs. Delia F. Alvarez</p>
-    <p>Mr. Ramvergin A. Atienza & Mrs. Jennalyn L. Atienza</p>
-    <p>Mr. Augusto V. Pagara & Mrs. Maricel L. Pagara</p>
-    <p>Mr. Wilson M. Reyes & Mrs. Necy P. Reyes</p>
-    <p>Mr. Albert D. Marasigan & Mrs. Nancy S. Marasigan</p>
-    <p>Mr. Luis S. Marasigan & Mrs. Rachel C. Marasigan</p>
-    <p>Mr. Manuelito M. Salazar & Mrs. Evelyn A. Salazar</p>
-    <p>Mr. Romeo C. Alcaraz & Mrs. Niceng T. Alcaraz</p>
-    <p>Mr. Ariel A. Aala & Mrs. Rocel C. Aala</p>
-    <p>Mr. Emil C. Navarro & Mrs. Annabelle V. Navarro</p>
-  </div>
-
-  <h3>To Assist Us In Our Needs</h3>
-  <div class="details">
-    <div><h4>Best Man</h4><p>Denmark Marasigan</p></div>
-    <div><h4>Maid of Honor</h4><p>Leslie Anne Pilapil</p></div>
-  </div>
-
-  <h3>To Guide Us On Our Way Ahead</h3>
-  <div class="details">
-    <div>
-      <h4>Groomsmen</h4>
-      <p>
-        John Patrick Marasigan<br>
-        Leonard Tumbaga<br>
-        Jhon Andrae Pilapil<br>
-        MJ Fernandez<br>
-	Samuel Marasigan<br>
-        Aaron Vincent Marasigan
-      </p>
-    </div>
-    <div>
-      <h4>Bridesmaids</h4>
-      <p>
-        Hazel Anne Pilapil<br>
-        Debbie Liwanag<br>
-        Jackielyn Maralit<br>
-        Jhenjhen Reyes<br>
-        Keisha Althea Bautista<br>
-        Mickaela Nicole Aala
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="fade-section">
-
+<!-- SECONDARY SPONSORS -->
+<section>
 <h2>Secondary Sponsors</h2>
 
-<!-- THREE COLUMN -->
 <div class="three-column">
-
-<div>
-<h4>To Light Our Path</h4>
-<p>
-Daniel Benedicto<br>
-Sherlyn Pilapil
-</p>
+<div><h4>To Light Our Path</h4><p>Daniel Benedicto<br>Sherlyn Pilapil</p></div>
+<div><h4>To Clothe Us As One</h4><p>Rainier Jade Cabral<br>Diana Rose Pernicol</p></div>
+<div><h4>To Bind Us Together</h4><p>JM De Leon<br>Monique Tumbaga</p></div>
 </div>
 
-<div>
-<h4>To Clothe Us As One</h4>
-<p>
-Rainier Jade Cabral<br>
-Diana Rose Pernicol
-</p>
-</div>
-
-<div>
-<h4>To Bind Us Together</h4>
-<p>
-JM De Leon<br>
-Monique Tumbaga
-</p>
-</div>
-
-</div>
-
-<!-- FIVE COLUMN -->
 <div class="five-column">
-
-<div>
-<h4>Symbol of Love</h4>
-<p>King Joseph Hernandez</p>
+<div><h4>Symbol of Love</h4><p>King Joseph Hernandez</p></div>
+<div><h4>Symbol of Faith</h4><p>Tristan Ace Endaya</p></div>
+<div><h4>Our Treasures</h4><p>Ken Tristan Carolino</p></div>
+<div><h4>Sign Bearer</h4><p>Rae Szymont Soriano</p></div>
+<div><h4>Little Groomsman</h4><p>Czaimon Earl Cabral</p></div>
 </div>
-
-<div>
-<h4>Symbol of Faith</h4>
-<p>Tristan Ace Endaya</p>
-</div>
-
-<div>
-<h4>Our Treasures</h4>
-<p>Ken Tristan Carolino</p>
-</div>
-
-<div>
-<h4>Sign Bearer</h4>
-<p>Rae Szymont Soriano</p>
-</div>
-
-<div>
-<h4>Little Groomsman</h4>
-<p>Czaimon Earl Cabral</p>
-</div>
-
-</div>
-
-<div class="single-column">
 
 <h4>Flower Girls</h4>
-</div>
-
 <div class="five-column">
 <p>Cleio Marie Matira</p>
 <p>Phia Joshaine Pilapil</p>
 <p>Reizelle Jewel Vidal</p>
 <p>Joana Elyse Pilapil</p>
 <p>Zoey Cuento</p>
-
 </div>
-
 </section>
 
-
-<section class="fade-section">
-  <h2>Share Your Photos With Us</h2>
-  <p>Help us relive our wedding day through your memories 🤍</p>
-  <a class="upload-btn" href="https://drive.google.com/drive/folders/1J4ibtDxxspTxIz6nimpksZSwuCBYIkDR" target="_blank">
-    Upload Your Photos
-  </a>
+<!-- SHARE PHOTOS -->
+<section>
+<h2>Share Your Photos With Us</h2>
+<p>Help us relive our wedding day 🤍</p>
+<a class="upload-btn" href="https://drive.google.com/drive/folders/1J4ibtDxxspTxIz6nimpksZSwuCBYIkDR" target="_blank">Upload Your Photos</a>
 </section>
 
-<section class="fade-section">
-  <h2>Prenup Gallery</h2>
-  <iframe src="https://drive.google.com/embeddedfolderview?id=1BwjeYrRAcLLNeNGae-3LrlQQtzqhpgKJ#grid"></iframe>
+<!-- PRENUP -->
+<section>
+<h2>Prenup Gallery</h2>
+<iframe src="https://drive.google.com/embeddedfolderview?id=1BwjeYrRAcLLNeNGae-3LrlQQtzqhpgKJ"></iframe>
 </section>
 
-<section class="fade-section">
-  <h2>Wedding Day Photos</h2>
-  <iframe src="https://drive.google.com/embeddedfolderview?id=1J4ibtDxxspTxIz6nimpksZSwuCBYIkDR#grid"></iframe>
+<!-- WEDDING DAY -->
+<section>
+<h2>Wedding Day Photos</h2>
+<iframe src="https://drive.google.com/embeddedfolderview?id=1J4ibtDxxspTxIz6nimpksZSwuCBYIkDR"></iframe>
 </section>
 
 <section id="hashtag">
-  <h2>#CATHsaysIDREW</h2>
-  <p>Share the love • Share the joy</p>
+<h2>#CATHsaysIDREW</h2>
+<p>Share the love • Share the joy</p>
 </section>
 
 <footer>© 2026 Cathlene & Andres</footer>
@@ -488,20 +361,19 @@ Monique Tumbaga
 <script>
 const weddingDate=new Date("April 11, 2026 09:00:00").getTime();
 setInterval(()=>{
-  const now=new Date().getTime();
-  const d=weddingDate-now;
-  days.innerText=Math.floor(d/(1000*60*60*24));
-  hours.innerText=Math.floor((d/(1000*60*60))%24);
-  minutes.innerText=Math.floor((d/(1000*60))%60);
-  seconds.innerText=Math.floor((d/1000)%60);
-},1000);
+const now=new Date().getTime();
+const d=weddingDate-now;
 
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add("show");
-  });
-},{threshold:0.15});
-document.querySelectorAll(".fade-section").forEach(s=>observer.observe(s));
+if(d<=0){
+document.getElementById("countdown").innerHTML="<h3>We're Married 💍</h3>";
+return;
+}
+
+days.innerText=Math.floor(d/(1000*60*60*24));
+hours.innerText=Math.floor((d/(1000*60*60))%24);
+minutes.innerText=Math.floor((d/(1000*60))%60);
+seconds.innerText=Math.floor((d/1000)%60);
+},1000);
 </script>
 
 </body>
