@@ -247,35 +247,32 @@ iframe{
   .gallery-preview iframe{height:320px;}
 }
 
-/* ===== FLORAL BACKGROUND ===== */
-
 body::before{
   content:"";
   position:fixed;
   inset:0;
   z-index:-1;
 
-  /* ADD YOUR FLOWER FILE PATHS HERE */
   background-image:
-    url("Asset 1.svg"),
-    url("Asset 2.svg"),
-    url("Asset 3.svg");
-
-  background-repeat:no-repeat, no-repeat, no-repeat;
-
-  /* position flowers around page */
-  background-position:
-    top left,
-    bottom right,
-    center;
+    url("D1.png"),
+    url("D2.png"),
+    url("D3.png"),
+    url("D4.png");
 
   background-size:
-    420px,
-    420px,
-    600px;
+    160px 160px,
+    160px 160px,
+    160px 160px;
 
-  opacity:.12; /* adjust opacity here */
+  /* each layer offset so they don’t overlap */
+  background-position:
+    0 0,
+    80px 80px,
+    0 80px;
 
+  background-repeat:repeat;
+
+  opacity:.10;
   pointer-events:none;
 }
 
